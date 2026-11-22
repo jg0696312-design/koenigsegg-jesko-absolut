@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0d0e">
+  <meta name="description" content="Poznaj Koenigsegg Jesko Absolut: silnik V8 twin-turbo, aerodynamikę, osiągi i galerię zdjęć.">
+  <title>Koenigsegg Jesko Absolut — osiągi i aerodynamika</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0b0d0e;
+      --surface: #141719;
+      --surface-light: #1b2022;
+      --text: #f5f6f2;
+      --muted: #a7afb0;
+      --accent: #d7ff54;
+      --line: rgba(255,255,255,.12);
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; min-width: 320px; background: var(--bg); }
+    a { color: inherit; }
+    .wrap { width: min(1160px, calc(100% - 48px)); margin-inline: auto; }
+    .topbar { position: sticky; top: 0; z-index: 5; border-bottom: 1px solid var(--line); background: rgba(11,13,14,.9); backdrop-filter: blur(14px); }
+    .topbar-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 72px; }
+    .brand { text-decoration: none; font-size: .9rem; font-weight: 800; letter-spacing: .14em; }
+    .brand span { color: var(--accent); }
+    .nav { display: flex; flex-wrap: wrap; gap: 24px; color: var(--muted); font-size: .9rem; }
+    .nav a { text-decoration: none; }
+    .nav a:hover, .nav a:focus-visible { color: var(--accent); }
+    .hero { border-bottom: 1px solid var(--line); background: radial-gradient(ellipse at 82% 10%, rgba(215,255,84,.12), transparent 40%), linear-gradient(135deg, #171b1c, #0b0d0e 72%); }
+    .hero-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 44px; padding-block: 68px; }
+    .eyebrow { margin: 0 0 14px; color: var(--accent); font-size: .75rem; font-weight: 800; letter-spacing: .17em; text-transform: uppercase; }
+    h1 { max-width: 650px; margin: 0; font-size: clamp(2.8rem, 7vw, 5.7rem); line-height: .96; letter-spacing: -.06em; }
+    h1 span { color: var(--accent); }
+    .hero-copy > p:not(.eyebrow) { max-width: 600px; margin: 22px 0 0; color: var(--muted); font-size: 1.1rem; line-height: 1.75; }
+    .tags { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 24px; }
+    .tag { padding: 9px 12px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,.04); color: var(--muted); font-size: .82rem; }
+    .tag strong { color: var(--accent); }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 18px; border: 1px solid var(--line); border-radius: 7px; font-size: .92rem; font-weight: 700; text-decoration: none; transition: transform .18s ease, background .18s ease; }
+    .button:hover { transform: translateY(-2px); }
+    .button-primary { border-color: var(--accent); background: var(--accent); color: #10130b; }
+    .button-secondary { background: rgba(255,255,255,.04); }
+    .hero-photo { margin: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 16px; background: #202526; box-shadow: 0 25px 70px rgba(0,0,0,.4); }
+    .hero-photo img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+    .hero-photo figcaption { padding: 12px 15px; color: var(--muted); font-size: .8rem; }
+    main { padding-bottom: 76px; }
+    .stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 34px; }
+    .stat { padding: 20px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+    .stat strong { display: block; color: var(--accent); font-size: clamp(1.35rem, 3vw, 2rem); letter-spacing: -.04em; }
+    .stat span { display: block; margin-top: 6px; color: var(--muted); font-size: .82rem; line-height: 1.45; }
+    .section { margin-top: 78px; scroll-margin-top: 92px; }
+    .section-head { max-width: 760px; margin-bottom: 26px; }
+    .section-head h2 { margin: 0; font-size: clamp(1.9rem, 4vw, 3rem); letter-spacing: -.045em; }
+    .section-head > p:last-child { margin: 14px 0 0; color: var(--muted); line-height: 1.75; }
+    .story-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 16px; }
+    .story-card, .spec-card { padding: clamp(22px, 4vw, 34px); border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+    .story-card h3, .spec-card h3 { margin: 0 0 12px; font-size: 1.2rem; }
+    .story-card p, .spec-card p { margin: 0; color: var(--muted); line-height: 1.75; }
+    .story-card.highlight { background: linear-gradient(140deg, #20271a, #141719 75%); }
+    .story-card .big-stat { display: block; margin: 4px 0 14px; color: var(--accent); font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 800; letter-spacing: -.05em; }
+    .spec-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    .spec-card { min-height: 170px; }
+    .spec-card .label { display: block; margin-bottom: 16px; color: var(--accent); font-size: .74rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+    .gallery-card { margin: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+    .gallery-card img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; background: var(--surface-light); }
+    .gallery-card figcaption { padding: 12px 14px; color: var(--muted); font-size: .84rem; }
+    .note { margin-top: 20px; color: var(--muted); font-size: .82rem; line-height: 1.6; }
+    footer { border-top: 1px solid var(--line); padding: 25px 0; color: var(--muted); font-size: .84rem; line-height: 1.6; }
+    footer p { margin: 0; }
+    footer a { color: var(--accent); }
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 30px; padding-block: 52px; }
+      .hero-photo { max-width: 760px; }
+      .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .section { margin-top: 60px; }
+    }
+    @media (max-width: 600px) {
+      .wrap { width: min(100% - 32px, 1160px); }
+      .topbar-inner { min-height: 64px; flex-wrap: wrap; justify-content: center; padding-block: 12px; }
+      .nav { justify-content: center; gap: 16px; font-size: .82rem; }
+      .hero-grid { padding-block: 42px; }
+      .stats, .story-grid, .spec-grid, .gallery-grid { grid-template-columns: 1fr; }
+      .section { margin-top: 48px; }
+      .gallery-card img { aspect-ratio: 16 / 11; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .button { transition: none; } }
+  </style>
+</head>
+<body>
+  <nav class="topbar" aria-label="Nawigacja główna">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="#start">JESKO <span>ABSOLUT</span></a>
+      <div class="nav"><a href="#koncepcja">Koncepcja</a><a href="#osiagi">Osiągi</a><a href="#galeria">Galeria</a></div>
+    </div>
+  </nav>
+  <header class="hero" id="start">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Koenigsegg · Hypercar</p>
+        <h1>Jesko <span>Absolut</span></h1>
+        <p>Zaprojektowany z myślą o prędkości. Jesko Absolut łączy podwójnie turbodoładowane V8, autorską skrzynię Light Speed Transmission i nadwozie dopracowane pod kątem niskiego oporu powietrza.</p>
+        <div class="tags"><span class="tag"><strong>5.0 L V8</strong> twin-turbo</span><span class="tag">Do 1 600 KM na E85</span><span class="tag">Limitowana seria · 125 sztuk</span></div>
+        <div class="actions"><a class="button button-primary" href="#osiagi">Poznaj osiągi</a><a class="button button-secondary" href="#galeria">Zobacz galerię</a></div>
+      </div>
+      <figure class="hero-photo">
+        <img src="https://koenigsegg-cdn-g7eehhd6f0ewcaff.z02.azurefd.net/drupal/styles/1920x1400/azure/2022-03/Koenigsegg%20Jesko%20Absolut%20Header%20V3.png" alt="Koenigsegg Jesko Absolut — widok z boku" fetchpriority="high">
+        <figcaption>Koenigsegg Jesko Absolut · fotografia producenta</figcaption>
+      </figure>
+    </div>
+  </header>
+  <main class="wrap">
+    <section class="stats" aria-label="Najważniejsze dane">
+      <div class="stat"><strong>1 600 KM</strong><span>maksymalna moc na paliwie E85</span></div>
+      <div class="stat"><strong>1 500 Nm</strong><span>maksymalny moment obrotowy</span></div>
+      <div class="stat"><strong>0,278 Cd</strong><span>współczynnik oporu powietrza</span></div>
+      <div class="stat"><strong>25,21 s</strong><span>próba 0–400–0 km/h · 2025</span></div>
+    </section>
+    <section class="section" id="koncepcja">
+      <div class="section-head"><p class="eyebrow">Forma podążająca za funkcją</p><h2>Stworzony, by przecinać powietrze</h2><p>Jesko Absolut to bardziej opływowa odmiana Jesko. Wydłużony tył i dopracowane powierzchnie nadwozia mają ograniczać opór i turbulencje, pomagając zachować stabilność przy bardzo wysokich prędkościach.</p></div>
+      <div class="story-grid">
+        <article class="story-card highlight"><span class="big-stat">0,278</span><h3>Opór powietrza</h3><p>Współczynnik Cd wynosi 0,278, a powierzchnia czołowa to 1,88 m². Każdy detal nadwozia podporządkowano efektywności aerodynamicznej.</p></article>
+        <article class="story-card"><h3>Prędkość bez obietnic</h3><p>Koenigsegg opisuje Absoluta jako samochód zaprojektowany z myślą o wyjątkowo wysokiej prędkości maksymalnej. Ostateczny wynik zależy od warunków i testów — nie podajemy niepotwierdzonej prędkości jako rekordu.</p></article>
+      </div>
+    </section>
+    <section class="section" id="osiagi">
+      <div class="section-head"><p class="eyebrow">Układ napędowy</p><h2>Moc, którą można precyzyjnie kontrolować</h2><p>Połączenie płaskiego wału korbowego V8, turbodoładowania i szybkiej skrzyni biegów tworzy serce Jesko Absolut.</p></div>
+      <div class="spec-grid">
+        <article class="spec-card"><span class="label">Silnik</span><h3>5,0-litrowe V8 twin-turbo</h3><p>Płaski wał korbowy o kącie 180° pozwala silnikowi osiągać do 8 500 obr./min. Według materiałów Koenigsegg waży 12,5 kg.</p></article>
+        <article class="spec-card"><span class="label">Moc i moment</span><h3>Do 1 600 KM · 1 500 Nm</h3><p>Silnik rozwija 1 280 KM na standardowym paliwie i do 1 600 KM na E85. Konkretne wartości zależą od używanego paliwa.</p></article>
+        <article class="spec-card"><span class="label">Przeniesienie napędu</span><h3>Light Speed Transmission</h3><p>Dziewięciobiegowa skrzynia LST wykorzystuje wielosprzęgłowe rozwiązanie do szybkiej zmiany przełożeń.</p></article>
+        <article class="spec-card"><span class="label">Wynik testu</span><h3>0–400–0 km/h w 25,21 s</h3><p>W sierpniu 2025 r. Jesko Absolut ustanowił podany przez producenta wynik łączonej próby przyspieszania i hamowania.</p></article>
+      </div>
+      <p class="note">Dane techniczne i wyniki podano informacyjnie na podstawie materiałów producenta. Mogą zależeć od konfiguracji, paliwa i warunków testowych.</p>
+    </section>
+    <section class="section" id="galeria">
+      <div class="section-head"><p class="eyebrow">Detale projektu</p><h2>Galeria</h2><p>Linia nadwozia, rozwiązania aerodynamiczne i detale konstrukcji Jesko Absolut.</p></div>
+      <div class="gallery-grid">
+        <figure class="gallery-card"><img src="https://koenigsegg-cdn-g7eehhd6f0ewcaff.z02.azurefd.net/drupal/styles/575x825/azure/2022-05/Stream_3%20copy.png" alt="Koenigsegg Jesko Absolut — detal nadwozia" loading="lazy"><figcaption>Linia nadwozia</figcaption></figure>
+        <figure class="gallery-card"><img src="https://koenigsegg-cdn-g7eehhd6f0ewcaff.z02.azurefd.net/drupal/styles/265x510/azure/2022-05/Stream_2%20copy.png" alt="Koenigsegg Jesko Absolut — widok z tyłu" loading="lazy"><figcaption>Profil aerodynamiczny</figcaption></figure>
+        <figure class="gallery-card"><img src="https://koenigsegg-cdn-g7eehhd6f0ewcaff.z02.azurefd.net/drupal/styles/430x265/azure/2022-05/Stream_1%20copy.png" alt="Koenigsegg Jesko Absolut — detal projektu" loading="lazy"><figcaption>Detale projektu</figcaption></figure>
+        <figure class="gallery-card"><img src="https://koenigsegg-cdn-g7eehhd6f0ewcaff.z02.azurefd.net/drupal/styles/1400x1000/azure/2022-04/Koenigsegg%20Jesko%20Absolut%20-%20Rear%20Tire.jpg" alt="Koło i tylna część Koenigsegg Jesko Absolut" loading="lazy"><figcaption>Koło i tylna część nadwozia</figcaption></figure>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap"><p>Strona informacyjna, nie jest ofertą sprzedaży. Zdjęcia: materiały wizualne Koenigsegg. Dane mogą różnić się zależnie od wersji i konfiguracji.</p></div></footer>
+</body>
+</html>
